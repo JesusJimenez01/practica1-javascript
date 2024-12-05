@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cifradocesar.js"></script>
+</head>
+<body>
+    <h1>Cifrado César</h1>
+    <h2>- Descifrar -</h2>
+    <div>
+        <label for="alfabeto">Alfabeto</label>
+        <select name="alfabeto" id="alfabeto" onchange="actualizarmaxrot()"> <!--Si cambia se actualiza la rotación máxima-->
+            <option value="castellano">Castellano</option>
+            <option value="ingles">Inglés</option>
+        </select>
+    </div>
+    <div>
+        <label for="texto">Texto a descifrar</label>
+        <textarea name="texto" id="texto"></textarea>
+    </div>
+    <div>
+        <label for="rot">Nivel de Rotado</label>
+        <input type="number" name="rot" id="rot" min="0" max="26" value="0">
+    </div>
+    <div>
+        <button type="button" onclick="descifrar()">Descifrar</button> <!-- Al pulsar descifra el texto -->
+    </div>
+    <p id="resultado"></p>
+</body>
+</html>
